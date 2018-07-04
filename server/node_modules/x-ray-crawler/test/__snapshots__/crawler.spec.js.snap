@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`X-ray Crawler can crawl google.com 1`] = `"text/html; charset=ISO-8859-1"`;

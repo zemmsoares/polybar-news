@@ -1,0 +1,11 @@
+{
+  "name": "yieldly",
+  "version": "0.0.1",
+  "main": "index.js",
+  "dependencies": {
+    "ForbesLindesay/is-browser": "2.0.1"
+  },
+  "development": {
+    "component/assert": "*"
+  }
+}
