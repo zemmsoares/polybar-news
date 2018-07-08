@@ -1,5 +1,7 @@
 ![Polynews Example](https://i.imgur.com/ALjgqS3.jpg)
 
+The idea is in the future to have several scripts for different news sites
+
 ## Get API Key
 
 Register [here](https://bonobo.capi.gutools.co.uk/register/developer) for a TheGuardian API key (free for non-profit projects)  
