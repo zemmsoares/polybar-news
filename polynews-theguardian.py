@@ -12,5 +12,5 @@ try:
 
     print(sectionName+': '+webTitle)
 	
-except requests.exceptions.RequestException as e:  # This is the correct syntax
+except requests.exceptions.RequestException as e:
     print ('Something went wrong!')
