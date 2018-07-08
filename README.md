@@ -2,6 +2,9 @@
 
 The idea is in the future to have several scripts for different news sites
 
+[![sample screenshot](http://i.imgur.com/RmbQrjS.png)](http://i.imgur.com/HWvaTtb.png)
+[![sample screenshot](http://i.imgur.com/XkxGKED.png)](https://i.imgur.com/Z2guyDz.png)
+
 ## Get API Key
 
 Register [here](https://bonobo.capi.gutools.co.uk/register/developer) for a TheGuardian API key (free for non-profit projects)  
