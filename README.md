@@ -10,7 +10,7 @@ Get the latest news on your polybar!
 Register [here](https://newsapi.org/) to receive API key (powered by NewsAPI.org)  
 Edit polynews.py, replace with your API key ```api_key = "YOUR_API_KEY"``` 
 
-## Show only from Source / country
+## Filter by news source / country
 
 You can select one / or several source provider(s) from here https://newsapi.org/sources
 Edit polynews.py, edit this line, add sources separeted by comma
@@ -19,7 +19,7 @@ Edit polynews.py, edit this line, add sources separeted by comma
 sources="ign,bbc-news"
 ```
 
-Insted sources, you can get news from your country only
+Insted sources, you can filter results by country
 ```ini
 country="us"
 ```
