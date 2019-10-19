@@ -1,7 +1,9 @@
-![Polynews Example](https://i.imgur.com/ALjgqS3.jpg)
+![Polynews Example](https://i.imgur.com/ALjgqS3.jpg)     
+![Polynews Example](https://i.imgur.com/hSehjcj.png)
 
 Get the latest news on your polybar!
 
+[![sample screenshot](https://i.imgur.com/oycBZ23.png)](https://i.imgur.com/JmpPatf.png)
 [![sample screenshot](http://i.imgur.com/RmbQrjS.png)](http://i.imgur.com/HWvaTtb.png)
 [![sample screenshot](http://i.imgur.com/XkxGKED.png)](https://i.imgur.com/Z2guyDz.png)
 
