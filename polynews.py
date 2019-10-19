@@ -23,4 +23,3 @@ try:
 except requests.exceptions.RequestException as e:
     print ('Something went wrong!')
 
-#API Powered by NewsAPI.org
