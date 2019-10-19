@@ -1,20 +1,36 @@
 ![Polynews Example](https://i.imgur.com/ALjgqS3.jpg)
 
-The idea is in the future to have several scripts for different news sites
+Get the latest news on your polybar!
 
 [![sample screenshot](http://i.imgur.com/RmbQrjS.png)](http://i.imgur.com/HWvaTtb.png)
 [![sample screenshot](http://i.imgur.com/XkxGKED.png)](https://i.imgur.com/Z2guyDz.png)
 
 ## Get API Key
 
-Register [here](https://bonobo.capi.gutools.co.uk/register/developer) for a TheGuardian API key (free for non-profit projects)  
-Edit polynews-theguardian.py, replace with your API key ```api_key = "API-KEY-HERE"``` 
+Register [here](https://newsapi.org/) to receive API key (powered by NewsAPI.org)  
+Edit polynews.py, replace with your API key ```api_key = "YOUR_API_KEY"``` 
+
+## Show only from Source / country
+
+You can select one / or several source provider(s) from here https://newsapi.org/sources
+Edit polynews.py, edit this line, add sources separeted by comma
+
+```ini
+sources="ign,bbc-news"
+```
+
+Insted sources, you can get news from your country only
+```ini
+country="us"
+```
+
+**Note** you can only filter either by sources or country, API doesn't support both, so leave one empty
 
 ## Module
 ```ini
 [module/polynews]
 type = custom/script
-exec = ~/polybar-scripts/polynews/polynews-theguardian.py
+exec = ~/polybar-scripts/polynews/polynews.py
 interval = 30
 format-prefix = " "
 ```
@@ -23,7 +39,7 @@ format-prefix = " "
 ```ini
 [module/polynews]
 ;type = custom/script
-;exec = ~/polybar-scripts/polynews/polynews-theguardian.py
+;exec = ~/polybar-scripts/polynews/polynews.py
 ;interval = 30
 ;format-prefix = " "
 label-maxlen = 50
