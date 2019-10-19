@@ -12,8 +12,8 @@ Edit polynews.py, replace with your API key ```api_key = "YOUR_API_KEY"```
 
 ## Filter by news source / country
 
-You can select one / or several source provider(s) from here https://newsapi.org/sources           
-Edit polynews.py, edit this line, add sources separeted by comma
+You can select one / or several source provider(s), get provider codes from here https://newsapi.org/sources           
+Edit polynews.py, add sources separeted by comma
 
 ```ini
 sources="ign,bbc-news"
