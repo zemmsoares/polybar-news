@@ -35,6 +35,7 @@ type = custom/script
 exec = ~/polybar-scripts/polynews/polynews.py
 interval = 30
 format-prefix = " "
+click-left = < ~/.config/polybar/polynews/current_url.txt xargs -I % xdg-open %
 ```
 
 ## Additional formatting
