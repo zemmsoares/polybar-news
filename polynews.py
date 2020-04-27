@@ -9,7 +9,7 @@ save_path = '/home/zemmsoares/.config/polybar/polynews/'
 
 #get your api key at https://newsapi.org/
 
-api_key = "aad33b474b5b4d05b445332cf82d4b07"
+api_key = "YOUR-API-KEY"
 
 #find sources & country codes at https://newsapi.org/sources
 
