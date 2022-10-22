@@ -36,7 +36,7 @@ exec = ~/.config/polybar/scripts/polynews/scroll_polynews_status.sh
 [module/polynews-grab]
 type = custom/script
 exec = ~/.config/polybar/scripts/polynews/polynews.py
-interval = 30
+interval = 900
 ```
 
 ## Additional formatting 
