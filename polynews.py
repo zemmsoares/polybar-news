@@ -13,8 +13,8 @@ api_key = "YOUR-API-KEY"
 sources = "associated-press"
 country = ""
 
-# save_url saves URL so that it is possible to open the news in the browser
-# the url will always be the most recent, enable if number_news = 1
+#The url is always the most recent regardless of the number of news to be shown, 
+#so it only makes sense to use it in case your number_news = 1
 save_url = False
 number_news = 3
 
