@@ -1,5 +1,4 @@
-![Polynews Example](https://i.imgur.com/ALjgqS3.jpg)  
-![Polynews Example](https://i.imgur.com/hSehjcj.png)
+![Polybar-news](/screenshots/polybar-news.gif?raw=true "Polybar-news")
 
 ## Get API Key
 
