@@ -3,18 +3,18 @@
 import requests
 import os.path
 
-#path to polynews script
-save_path ='/home/zm/.config/polybar/scripts/polynews'
+#path to news script
+save_path ='/home/zm/.config/polybar/scripts/news'
 
 #get your api key at https://newsapi.org/
-api_key = "YOUR-API-KEY"
+api_key = "API-KEY-HERE"
 
 #find sources & country codes at https://newsapi.org/sources
 sources = "associated-press"
 country = ""
 
-#The url is always the most recent regardless of the number of news to be shown, 
-#so it only makes sense to use it in case your number_news = 1
+# save_url saves URL so that it is possible to open the news in the browser
+# the url will always be the most recent, enable if number_news = 1
 save_url = False
 number_news = 3
 

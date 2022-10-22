@@ -1,4 +1,4 @@
-![Polynews Example](https://i.imgur.com/ALjgqS3.jpg)     
+![Polynews Example](https://i.imgur.com/ALjgqS3.jpg)  
 ![Polynews Example](https://i.imgur.com/hSehjcj.png)
 
 ## Get API Key
@@ -8,13 +8,14 @@ Replace it in `polybar-news.py`
 
 ## Filter by news source / country
 
-You can select one / or several source provider(s) https://newsapi.org/sources           
+You can select one / or several source provider(s) https://newsapi.org/sources
 
 ```ini
 sources="ign,bbc-news"
 ```
 
 Or filter by country
+
 ```ini
 country="us"
 ```
@@ -27,28 +28,30 @@ country="us"
 - [requests](https://pypi.org/project/requests/) - python requests
 
 ## Modules
+
 ```ini
-[module/polybar-news]
+[module/news]
 type = custom/script
 tail = true
 interval = 1
 format-prefix = "  "
 format = <label>
 label-padding = 1
-exec = ~/.config/polybar/scripts/polynews/scroll_polynews_status.sh
-;click-left = < ~/.config/polybar/scripts/polybar-news/current_url.txt xargs -I % xdg-open %
+exec = ~/.config/polybar/scripts/news/scroll_news_status.sh
+;click-left = < ~/.config/polybar/scripts/news/current_url.txt xargs -I % xdg-open %
 
-[module/polybar-news-grab]
+[module/news-grab]
 type = custom/script
-exec = ~/.config/polybar/scripts/polybar-news/polybar-news.py
+exec = ~/.config/polybar/scripts/news/news.py
 interval = 900
 ```
 
-## Additional formatting 
+## Additional formatting
+
 Open on click
 
 ```ini
-#The url is always the most recent regardless of the number of news to be shown, 
+#The url is always the most recent regardless of the number of news to be shown,
 #so it only makes sense to use it in case your number_news = 1
 save_url = True
 number_news = 1
