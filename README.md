@@ -23,8 +23,9 @@ country="us"
 
 ## Dependencies
 
-- [zscroll](https://github.com/noctuid/zscroll#installation) - scroll text
 - [requests](https://pypi.org/project/requests/) - python requests
+- [zscroll](https://github.com/noctuid/zscroll#installation) - for **polybar** scroll
+- [scroll](https://github.com/Anachron/i3blocks#scroll) - for **i3blocks** scroll
 
 ## Modules
 
