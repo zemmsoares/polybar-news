@@ -4,7 +4,7 @@ import requests
 import os.path
 
 #path where news are saved in txt (default current directory)
-save_path = os.getcwd()
+save_path ='/home/zm/.config/polybar/scripts/news'
 
 #get your api key at https://newsapi.org/
 api_key = "API_KEY_HERE"
