@@ -2,14 +2,10 @@
 
 import requests
 import os
-from config import api_key
+from config import api_key,sources,country
 
 #path where news are saved in txt (default current directory)
 save_path = os.path.dirname(os.path.realpath(__file__))
-
-#find sources & country codes at https://newsapi.org/sources
-sources = "associated-press"
-country = ""
 
 # save_url saves URL so that it is possible to open the news in the browser
 # the url will always be the most recent, enable if number_news = 1
