@@ -1,13 +1,11 @@
 #!/usr/bin/python
 
 import requests
-import os.path
+import os
+from config import api_key
 
 #path where news are saved in txt (default current directory)
-save_path ='/home/zm/.config/polybar/scripts/news'
-
-#get your api key at https://newsapi.org/
-api_key = "API_KEY_HERE"
+save_path = os.path.dirname(os.path.realpath(__file__))
 
 #find sources & country codes at https://newsapi.org/sources
 sources = "associated-press"
