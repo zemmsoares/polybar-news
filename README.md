@@ -1,64 +1,53 @@
 ![Polybar-news](/screenshots/polybar-news.gif?raw=true "Polybar-news")
 
-## Get API Key
+## Setup Instructions
 
-Register [here](https://newsapi.org/) to receive API key (powered by NewsAPI.org)  
-Replace it in `polybar-news.py`
+1. Register at [NewsAPI.org](https://newsapi.org/) to receive your API key.
 
-## Filter by news source / country
+2. Configure your desired news sources and/or country. For available options, refer to [NewsAPI.org/sources](https://newsapi.org/sources). Note: You can only filter either by sources or country.
 
-You can select one / or several source provider(s) https://newsapi.org/sources
-
-```ini
-sources="ign,bbc-news"
-```
-
-Or filter by country
-
-```ini
-country="us"
-```
-
-**Note** you can only filter either by sources or country.
-
+3. Create a `config.py` file in the root of the project folder with the following structure:
+   
+   ```python
+   api_key = "<your_api_key_here>"
+   sources = "<your_desired_sources_here>"
+   country = "<your_desired_country_here>"
 ## Dependencies
 
 - [requests](https://pypi.org/project/requests/) - python requests
-- [zscroll](https://github.com/noctuid/zscroll#installation) - for **polybar** scroll
-- [scroll](https://github.com/Anachron/i3blocks#scroll) - for **i3blocks** scroll
+- [zscroll](https://github.com/noctuid/zscroll#installation) - for **polybar** scroll *(optional)*
+- [scroll](https://github.com/Anachron/i3blocks#scroll) - for **i3blocks** scroll *(optional)*
 
-## Modules
+## Polybar Modules
 
 ```ini
-[module/news]
+; Fetches news from API and saves it into articles.json
+; This module runs every 900 seconds (15 minutes) due to API limit of 100 calls per day for free tier accounts
+[module/news-fetcher]
+type = custom/script
+exec = ~/.my_python_envs/polybar_news_env/bin/python ~/.config/polybar/custom-modules/polybar-news/news_fetcher.py
+interval = 900
+
+; Rotates through the list of news articles in articles.json 
+; and saves the current article's title and URL in separate text files
+; This module runs every X seconds to change the displayed article
+[module/news-rotator]
+type = custom/script
+interval = 60
+exec = ~/.my_python_envs/polybar_news_env/bin/python ~/.config/polybar/custom-modules/polybar-news/news_rotator.py
+
+; Displays the current news article title
+; Refreshes every second to ensure updated information is displayed 
+; On left click, opens the current article's URL in the default web browser
+[module/news-display]
 type = custom/script
 tail = true
 interval = 1
 format-prefix = "  "
 format = <label>
 label-padding = 1
-exec = ~/.config/polybar/scripts/news/scroll_news_status.sh
-;click-left = < ~/.config/polybar/scripts/news/current_url.txt xargs -I % xdg-open %
+;label-maxlen = 50
+exec = ~/.config/polybar/custom-modules/polybar-news/print_current_article.sh ; For scrolling change to scroll_current_article.sh
+click-left = < ~/.config/polybar/custom-modules/polybar-news/current_article_url.txt xargs -I % xdg-open %
 
-[module/news-grab]
-type = custom/script
-exec = ~/.config/polybar/scripts/news/news.py
-interval = 900
-```
-
-## Additional formatting
-
-Open on click
-
-```ini
-#The url is always the most recent regardless of the number of news to be shown,
-#so it only makes sense to use it in case your number_news = 1
-save_url = True
-number_news = 1
-```
-
-```ini
-[module/polybar-news]
-; Also make sure enable-ipc = true on your global config
-click-left = < ~/.config/polybar/scripts/polybar-news/current_url.txt xargs -I % xdg-open %
 ```
