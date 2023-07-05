@@ -1,4 +1,4 @@
-![Polybar-news](/screenshots/polybar-news.gif?raw=true "Polybar-news")
+![Polybar-news](/assets/example.gif?raw=true "Polybar-news")
 
 ## Setup Instructions
 
