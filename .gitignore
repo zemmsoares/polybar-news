@@ -1,3 +1,5 @@
 __pycache__
-current_news.txt
-config.py
+articles.json
+current_article_url.txt
+current_article.txt
+config.py 

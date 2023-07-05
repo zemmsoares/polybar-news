@@ -4,4 +4,4 @@
 script_dir=$(dirname "$0")
 
 # Print the current news article
-echo "$(<"$script_dir/current_news.txt")"
+echo "$(<"$script_dir/current_article.txt")"
