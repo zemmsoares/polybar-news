@@ -13,7 +13,15 @@ with open(os.path.join(script_dir, "articles.json"), 'r+') as f:
 
     # Get the current article
     article = articles[index]
-    current_article = '[{source}] {title}'.format(**article)
+
+    # Check if 'source' key exists
+    if 'source' in article:
+        source = article['source']
+    else:
+        source = article['type']
+
+    # Now, you can use 'source' in your formatted string
+    current_article = '[{0}] {1}'.format(source, article['title'])
 
     # Write the URL to a separate file
     with open(os.path.join(script_dir, "current_article_url.txt"), "w") as url_file:
