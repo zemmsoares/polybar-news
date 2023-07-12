@@ -121,9 +121,13 @@ A module to display the latest news on Polybar and i3blocks from multiple source
     # Refreshes every second to ensure updated information is displayed
     # On left click, opens the current article's URL in the default web browser
     [news-display]
-    command=/path/to/polybar-news/print_current_article.sh
+    command=path/to/polybar-news/print_current_article.sh
     interval=1
     separator=true
+    markup=pango
+    label= 
+    command=if [ $button ]; then xdg-open "$(cat /path/to/polybar-news/current_article_url.txt)"; else $HOME/.config/i3/i3blocks/scroll path/to/polybar-news/print_current_article.sh; fi
+
     ```
 
 6. Text Scrolling (Optional)
@@ -164,6 +168,7 @@ A module to display the latest news on Polybar and i3blocks from multiple source
         separator=true
         markup=pango
         label= 
+        command=if [ $button ]; then xdg-open "$(cat /path/to/polybar-news/current_article_url.txt)"; else $HOME/.config/i3/i3blocks/scroll path/to/polybar-news/print_current_article.sh; fi
         ```
 
 ## Contributing
